@@ -57,14 +57,6 @@ function getContainer(position: NotificationPosition): HTMLDivElement | null {
 
   return container;
 }
-
-const TYPE_BORDERS: Record<NotificationType, string> = {
-  info: 'rgba(96, 165, 250, 0.3)',
-  success: 'rgba(74, 222, 128, 0.3)',
-  error: 'rgba(248, 113, 113, 0.35)',
-  warning: 'rgba(251, 191, 36, 0.35)',
-};
-
 /**
  * Show a notification popup (alert replacement)
  */
@@ -123,13 +115,13 @@ function createNotification(
     max-width: 440px;
     background: #1c1c1c;
     color: #ffffff;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 12px 18px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.45;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
-    border: 1px solid ${TYPE_BORDERS[type]};
+    border: none;
     opacity: 0;
     transform: translateY(${initialTranslateY}) scale(0.95);
     transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
