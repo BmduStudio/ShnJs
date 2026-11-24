@@ -1,6 +1,6 @@
 {
   "name": "@bmdu_studio/shnjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Super lightweight, zero-dependency notification & alert replacement library for modern web apps.",
   "keywords": [
     "notification",
